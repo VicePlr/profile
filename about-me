@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Vice's Profile</title>
+        <style>
+		  body {
+		    font-family: Arial, sans-serif;
+		    margin: 50px;
+		    background-color: #f9fafc;
+		    color: #222;
+		  }
+		  h1 {
+		    text-align: center;
+		    font-family: serif;
+		    font-style: italic;
+		    color: #333;
+		  }
+		  h2 {
+		    color: #e748f0;
+		  }
+		  p {
+		    line-height: 1.6;
+		  }
+		  a {
+		    color: #e748f0;
+		    text-decoration: none;
+		  }
+		  a:hover {
+		    text-decoration: underline;
+		  }
+		  img {
+		    display: block;
+		    margin: 5px;
+		    border-radius: 100%;
+		  }
+		  nav {
+		  	text-align: center;
+		  }
+
+		  nav a:hover{
+		  	color: black;
+		  	text-decoration: blink;
+		  }
+		</style>
+
+    </head>
+    <body>
+    	<h1><strong>Quick Travel</strong></h1>
+    	<nav>
+		 	<a href="#About-me">About Me</a> |
+		 	<a href="#Skills">Skills</a> |
+		 	<a href="#Projects">Projects</a> |
+		 	<a href="#Contacts">Contacts</a> |
+		 	<a href="#Others">Others</a> 
+		</nav>
+
+		<section id="About-me">
+			<h2 class="test">1. About me</h2>
+	        <p>Name: Trong Hieu <del style="color:#e748f0">ALIAS</del> Vice </p>
+	        <img src="avatar.jpg" alt="Unknow Error Occured" width="100" height="100">
+	        <p><mark>Mấy con lợn biết gì về anh 😊</mark><p> 
+	        <p><strong>Birthday</strong>: <mark>23/06/2007</mark></p> 
+	        <p><strong>Hobby</strong>: Programming, games (especially gacha types), anime, manga, manhwa</p>
+	        <p><strong>Education</strong>: Freshman at FPT University. 
+	        <p><strong>Goal</strong>: I am currently pursuing my AI engineer career as a student of FPT University</p>
+		</section>
+
+		<section id = "Skills">
+			<h2>2. My skills</h2>
+	        <p><strong>Skills</strong>: Python, Pandas, MS SQL, HTML</p>
+	        <p><strong>Learning</strong>: Python, Pandas, MS SQL, HTML, CSS, JavaScript -> Machine Learning, Deep Learning</p>
+
+		</section>
+        
+        <section id = "Projects">
+	        <h2>3. Projects</h2>
+	        <p>Tic Tac Toe (3x3 board game assgined with AI using mini-max algorithm) </p>
+	        <p>Button Simulator (a game belongs to simulator category in Roblox)</p>
+
+        </section>
+        
+        <section id = "Contacts">
+        	<h2>4. Contacts</h2>
+        	<p><strong>Email</strong>: th91rb@gmail.com</p>
+        	<p><strong>Facebook</strong>: <a href="https://www.facebook.com/viceplrontop">Trọng Hiếu (Vice)</a></p>
+
+        </section>
+        
+        <section id = "Others">
+        	<h2>5. Others</h2>
+        	<a href="https://leetcode.com/u/vice_th/">LeetCode</a>
+        </section>
+        
+    </body>
+</html>

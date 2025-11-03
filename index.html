@@ -6,6 +6,27 @@
 
         <title>Vice's Profile</title>
         <style>
+          @keyframes moving_left_right{
+		  	0%, 100%{left:0px;}
+		  	50%{left: 500px;}
+		  }
+		  @keyframes rotate{
+		  	0%,100%{
+		  		transform: rotate(0deg);
+		  	}
+		  	50%{
+		  		transform: rotate(180deg);
+		  	}
+		  }
+		  @keyframes rainbow{
+		  	0%, 100%{color: Red;}
+		  	8.33%{color: orange;}
+		  	16.67%{color: yellow;}
+		  	25%{color: green;}
+		  	33.33%{color: blue;}
+		  	41.67%{color: indigo;}
+		  	50%{color: violet;}
+		  }
 		  .Area2nd {
 		    font-family: Arial, sans-serif;
 		    margin: 20px;
@@ -16,19 +37,15 @@
 		    padding: 10px;
 		  }
 		  h1 {
-		    text-align: center;
+		  	text-align: center;
 		    font-family: serif;
 		    font-style: italic;
 		    color: #333;
-		    animation: rotate 5s linear infinite;
-		  }
-		  @keyframes rotate{
-		  	from{
-		  		transform: rotate(0deg);
-		  	}
-		  	to{
-		  		transform: rotate(360deg);
-		  	}
+		    animation-name: rotate, rainbow;
+		    animation-duration: 2s;
+		    animation-direction: reverse;
+		    animation-iteration-count: infinite;
+		    animation-timing-function: linear;
 		  }
 		  h2 {
 		    color: #e748f0;
@@ -43,7 +60,7 @@
 		    line-height: 1.6;
 		  }
 		  a {
-		    color: #e748f0;
+		    color: #0000FF;
 		  }
 		  a:hover {
 		    text-decoration: underline;
@@ -53,10 +70,14 @@
 		    margin: 5px;
 		    border-radius: 100%;
 		    border: 2px solid #e748f0;
+		    position: relative;
+		    animation-name: moving_left_right, rotate;
+		    animation-duration: 5s;
+		  	animation-iteration-count: infinite;
+		  	animation-timing-function: ease;
 		  }
 		  nav {
 		  	position:sticky;
-		  	top: 0;
 		  	text-align: center;
 		  }
 
@@ -65,8 +86,10 @@
 		  	transition: transform 0.4s;
 		  }
 		  nav a:hover{
-		  	color: black;
 		  	text-decoration: underline;
+		  	animation-name: rainbow;
+		  	animation-duration: 4s;
+		  	animation-iteration-count: infinite;
 		  	transform: scale(1.1);
 		  }
 		</style>
@@ -86,8 +109,10 @@
 		<div class="Area2nd">
 			<section id="About-me">
 				<h2 class="test">1. About me</h2>
-		        <p>Name: Trong Hieu <del style="color:#e748f0">ALIAS</del> Vice </p>
-		        <img src="avatar.jpg" alt="Unknow Error Occured" width="100" height="100">
+		        <p><strong>Name</strong>: Trong Hieu <del style="color:#e748f0">ALIAS</del> Vice </p>
+		        <img src="avatar.jpg" alt="Unknow Error Occured" width="75" height="75">
+		        <img src="avatar2.jpg" alt="Unknow Error Occured" width="75" height="75">
+		        <img src="avatar3.jpg" alt="Unknow Error Occured" width="75" height="75">
 		        <p><strong>Birthday</strong>: <mark>23/06/2007</mark></p> 
 		        <p><strong>Hobby</strong>: Programming, games (especially gacha types), anime, manga, manhwa</p>
 		        <p><strong>Education</strong>: Freshman at FPT University. 

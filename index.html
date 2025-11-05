@@ -4,146 +4,208 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Vice's Profile</title>
+        <title>My Profile - Vice</title>
         <style>
-          @keyframes moving_left_right{
-		  	0%, 100%{left:0px;}
-		  	50%{left: 500px;}
-		  }
-		  @keyframes rotate{
-		  	0%,100%{
-		  		transform: rotate(0deg);
-		  	}
-		  	50%{
-		  		transform: rotate(180deg);
-		  	}
-		  }
-		  @keyframes rainbow{
-		  	0%, 100%{color: Red;}
-		  	8.33%{color: orange;}
-		  	16.67%{color: yellow;}
-		  	25%{color: green;}
-		  	33.33%{color: blue;}
-		  	41.67%{color: indigo;}
-		  	50%{color: violet;}
-		  }
-		  .Area2nd {
-		    font-family: Arial, sans-serif;
-		    margin: 20px;
-		    background-color: #f9fafc;
-		    color: #222;
-		    border: 5px solid #708090;
-		    border-radius: 1%;
-		    padding: 10px;
-		  }
-		  h1 {
-		  	text-align: center;
-		    font-family: serif;
-		    font-style: italic;
-		    color: #333;
-		    animation-name: rotate, rainbow;
-		    animation-duration: 2s;
-		    animation-direction: reverse;
-		    animation-iteration-count: infinite;
-		    animation-timing-function: linear;
-		  }
-		  h2 {
-		    color: #e748f0;
-		    display: inline-block;
-		    transition: transform 0.2s;
-		    transform-origin: left;
-		  }
-		  h2:hover {
-		  	transform: scale(1.1);
-		  }
-		  p {
-		    line-height: 1.6;
-		  }
-		  a {
-		    color: #0000FF;
-		  }
-		  a:hover {
-		    text-decoration: underline;
-		  }
-		  img {
-		    display: block;
-		    margin: 5px;
-		    border-radius: 100%;
-		    border: 2px solid #e748f0;
-		    position: relative;
-		    animation-name: moving_left_right, rotate;
-		    animation-duration: 5s;
-		  	animation-iteration-count: infinite;
-		  	animation-timing-function: ease;
-		  }
-		  nav {
-		  	position:sticky;
-		  	text-align: center;
-		  }
-
-		  nav a{
-		  	display: inline-block;
-		  	transition: transform 0.4s;
-		  }
-		  nav a:hover{
-		  	text-decoration: underline;
-		  	animation-name: rainbow;
-		  	animation-duration: 4s;
-		  	animation-iteration-count: infinite;
-		  	transform: scale(1.1);
-		  }
+          .body{
+          	background-color: #FCFCFC;
+          }
+          p{
+          	font-family: sans-serif;
+          }
+          h1{
+          	font-family: sans-serif;
+          }
+          span{
+          	font-family: sans-serif;
+          }
+          .container{
+          	width: 95%;
+          	min-height: 200px;
+          	margin: auto;
+          	margin-top: 15px;
+          }
+          .heading{
+          	font-family: sans-serif;
+          	margin: 10px auto;
+          	width: 95%;
+          	text-align: left;
+          	margin-top: 20px;
+          	margin-bottom: 20px;
+          }
+          .inbox-heading{
+          	font-family: sans-serif;
+          }
+          .box-1{
+          	margin: 10px auto;
+          	width: 95%;
+          	height: 200px;
+          	min-height: 200px;
+          	background-color: white;
+          	border-radius: 10px;
+          	box-shadow: 0px 0px 7px #F5F5F5;
+          	display: flex;
+          	align-items: center;
+          }
+          .bio{
+          	margin-left: 20px;
+          }
+          .skill{
+          	display: inline-block;
+          	background-color: #f1d67f;
+          	border-radius: 10px;
+          	padding-left: 10px;
+          	padding-right: 10px;
+          	padding-top: 3px;
+          	padding-bottom: 3px;
+          	text-align: center;
+          	transition: color 0.7s, background-color 0.7s;
+          }
+          .skill:hover{
+          	background-color: green;
+          	color: white;
+          	font-weight: bold;
+          }
+          .skill-learning{
+          	display: inline-block;
+          	background-color: dimgray;
+          	border-radius: 10px;
+          	padding-left: 10px;
+          	padding-right: 10px;
+          	padding-top: 3px;
+          	padding-bottom: 3px;
+          	text-align: center;
+          	transition: color 0.7s, background-color 0.7s;
+          }
+          .skill-learning:hover{
+          	background-color: black;
+          	color: white;
+          	font-weight: bold;
+          }
+          .upper-menu{
+          	width: 95%;
+          	margin: 10px auto;
+          	min-height: 20px;
+          	display: flex;
+          	justify-content: space-between;
+          }
+          .navigation a{
+          	font-family: sans-serif;
+          	color: blue;
+          	text-decoration: none;
+          	margin-left: 6px;
+          	font-weight: bold;
+          	display: inline-block;
+          	transition: opacity 0.5s, transform 0.5s;
+          }
+          .navigation a:hover{
+          	cursor: pointer;
+          	text-decoration: underline;
+          	transform: rotate(10deg);
+          	opacity: 0.5;
+          }
+          .avatar img{
+          	width: 100px;
+          	height: 100px;
+          	border-radius: 10px;
+          	animation-name: shake;
+          	animation-iteration-count: infinite;
+          	animation-duration: 2s;
+          	animation-direction: ease;
+          	margin-left: 20px;
+          }
+          .projects{
+          	width: 95%;
+          	margin: 10px auto;
+          	display: flex;
+          	justify-content: space-between;
+          }
+          .projects div{
+          	margin: 10px auto;
+          	width: 95%;
+          	min-height: 100px;
+          	padding: 10px 20px;
+          	background-color: white;
+          	border-radius: 10px;
+          	box-shadow: 0px 0px 7px #F5F5F5;
+          	align-items: center;
+          }
+          .projects div button{
+          	border-radius: 4px;
+          	text-decoration: none;
+          	background-color: none;
+          }
+          .projects div button a{
+          	display: inline-block;
+          	color: black;
+          	text-decoration: none;
+          	background-color: none;
+          	padding: 5px 10px;
+          	transition: color 0.7s, transform 0.7s;
+          }
+          .projects div button a:hover{
+          	color: red;
+          	transform: rotate(10deg);
+          }
+          
+          @keyframes shake{
+          	0%,100%{
+          		transform: rotate(10deg);
+          	}
+          	50%{
+          		transform: rotate(-10deg);
+          	}
+          }
 		</style>
 
     </head>
 
-    <body>
-    	<h1>Quick Travel</h1>
-    	<nav>
-		 	<a href="#About-me">About Me</a> |
-		 	<a href="#Skills">Skills</a> |
-		 	<a href="#Projects">Projects</a> |
-		 	<a href="#Contacts">Contacts</a> |
-		 	<a href="#Others">Others</a> 
-		</nav>
-
-		<div class="Area2nd">
-			<section id="About-me">
-				<h2 class="test">1. About me</h2>
-		        <p><strong>Name</strong>: Trong Hieu <del style="color:#e748f0">ALIAS</del> Vice </p>
-		        <img src="folder/avatar.jpg" alt="Unknow Error Occured" width="75" height="75">
-		        <img src="folder/avatar2.jpg" alt="Unknow Error Occured" width="75" height="75">
-		        <img src="folder/avatar3.jpg" alt="Unknow Error Occured" width="75" height="75">
-		        <p><strong>Birthday</strong>: <mark>23/06/2007</mark></p> 
-		        <p><strong>Hobby</strong>: Programming, games (especially gacha types), anime, manga, manhwa</p>
-		        <p><strong>Education</strong>: Freshman at FPT University. 
-		        <p><strong>Goal</strong>: I am currently pursuing my AI engineer career as a student of FPT University</p>
-			</section>
-
-			<section id = "Skills">
-				<h2>2. My skills</h2>
-		        <p><strong>Skills</strong>: Python, Pandas, MS SQL, HTML</p>
-		        <p><strong>Learning</strong>: Python, Pandas, MS SQL, HTML, CSS, JavaScript -> Machine Learning, Deep Learning</p>
-
-			</section>
-	        
-	        <section id = "Projects">
-		        <h2>3. Projects</h2>
-		        <p>Tic Tac Toe (3x3 board game assgined with AI using mini-max algorithm) </p>
-		        <p>Button Simulator (a game belongs to simulator category in Roblox)</p>
-
-	        </section>
-	        
-	        <section id = "Contacts">
-	        	<h2>4. Contacts</h2>
-	        	<p><strong>Email</strong>: th91rb@gmail.com</p>
-	        	<p><strong>Facebook</strong>: <a href="https://www.facebook.com/viceplrontop">Trọng Hiếu (Vice)</a></p>
-
-	        </section>
-	        
-	        <section id = "Others">
-	        	<h2>5. Others</h2><br>
-	        	<p><strong>LeetCode Profile</strong>: <button type="button"><a href="https://leetcode.com/u/vice_th/">Link</a></button></p>
-	        </section>
-        </div>
+    <body class="body">
+    	<div class="container">
+    		<div class="upper-menu">
+	    		<span style="font-weight: bold;">Hoang Trong Hieu - Vice</span>
+	    		<nav class="navigation">
+	    			<a href="#box-1">About</a>
+	    			<a href="#heading">Projects</a>
+	    			<a href="#">Contact</a>
+	    		</nav>
+	    	</div>
+	    	<div class="box-1">
+    			<div class="avatar">
+    				<img src="folder/avatar.jpg">
+    			</div>
+    			<div class="bio">
+    				<h1>Hello - I'm Hieu</h1>
+    				<p>I love playing games, watching anime and enjoy my learning journey.</p>
+    				<p><span>My skills:</span> 
+    					<span class="skill">Python</span> 
+    					<span class="skill">Pandas</span> 
+    					<span class="skill">MS SQL</span>
+    					<span class="skill">HTML</span>
+    					<span class="skill">CSS</span>
+    				</p>
+    				<p><span>Still Learning:</span> 
+    					<span class="skill-learning">Python</span> 
+    					<span class="skill-learning">Pandas</span> 
+    					<span class="skill-learning">MS SQL</span>
+    					<span class="skill-learning">HTML</span>
+    					<span class="skill-learning">CSS</span>
+    					<span class="skill-learning">JavaScript</span>
+    				</p>
+    			</div>
+    		</div>
+    		<h2 class="heading">Projects</h2>
+    		<div class="projects">
+    			<div>
+    				<h3 class="inbox-heading">Project 1</h3>
+    				<p>Tic Tac Toe - 3x3 board with AI assigned</p>
+    			</div>
+    			<div>
+    				<h3 class="inbox-heading">Project 2</h3>
+    				<p>Button Simulator: Infinite</p> 
+    				<p>Category: Simulator in Roblox</p>
+    				<button><a href="https://www.roblox.com/games/118061487153228" target="_ ">Play</a></button>
+    			</div>
+    		</div>
+    	</div>
     </body>
 </html>
